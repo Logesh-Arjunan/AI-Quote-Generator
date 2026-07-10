@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased;
+  }
+}
+
+/* Glassmorphism panel styling */
+.glass-panel {
+  @apply bg-white/70 dark:bg-slate-900/75 backdrop-blur-md border border-slate-200/50 dark:border-slate-800/50 shadow-xl shadow-slate-100/50 dark:shadow-none;
+}
+
+.glass-input {
+  @apply bg-slate-100/50 dark:bg-slate-950/50 border border-slate-200 dark:border-slate-800/60 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-brand-500/50 focus:border-brand-500 transition-all duration-200;
+}
+
+/* Custom background animations */
+.glow-spot {
+  @apply absolute rounded-full blur-3xl opacity-30 pointer-events-none;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-800 rounded-full hover:bg-slate-400 dark:hover:bg-slate-700 transition-all;
+}
+
+/* Toast custom theme integration */
+.Toastify__toast-theme--dark {
+  @apply bg-slate-900 border border-slate-800 text-slate-100 rounded-xl !important;
+}
+
+.Toastify__toast-theme--light {
+  @apply bg-white border border-slate-100 text-slate-900 rounded-xl !important;
+}
